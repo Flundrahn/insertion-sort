@@ -19,13 +19,12 @@ public static class Result
         return numberOfMoves;
     }
 
-    // NOTE Returns sorted array
     public static int[] DoInsertionSort(int[] arr)
     {
         for (var i = 1; i < arr.Length; i++)
         {
             var currentInteger = arr[i];
-            // var flag = 0;
+
             var j = i - 1;
 
             while (j >= 0 && arr[j] >= currentInteger)
@@ -39,11 +38,9 @@ public static class Result
         return arr;
     }
 
-    // NOTE Returns sorted array
     public static int[] DoFredSort(int[] arr)
     {
-        // IEnumerable<int> newLeftArray = null;
-        var newLeftArray = new int[] { };
+        IEnumerable<int> sorted = arr.Take(2);
 
         for (var i = 1; i < arr.Length; i++)
         {
@@ -53,11 +50,35 @@ public static class Result
             var middleIndex = i / 2;
             var lowerIndex = 0;
 
+            while (upperIndex - lowerIndex > 0)
+            {
+                if (current < arr[middleIndex])
+                {
+                    upperIndex = middleIndex;
+                }
+                else if (current > arr[middleIndex])
+                {
+                    lowerIndex = middleIndex + 1;
+                }
+                else
+                {
+                    goto insert;
+                }
+
+                middleIndex = (upperIndex + lowerIndex) / 2;
+            }
+
+        insert:
+            sorted = sorted.Take(middleIndex)
+                .Concat(new int[] { current })
+                .Concat(sorted
+                    .Skip(middleIndex)
+                    .Take(i - middleIndex));
         }
-    // NOTE the range operator does not include last indice.
-    
-        return newLeftArray;
+        return sorted!.ToArray();
     }
+
+    public static int GetMiddleIndex(int upperIndex, int lowerIndex) => (upperIndex + lowerIndex) / 2;
 
     // while (middleIndex > lowerIndex)
     //         {
