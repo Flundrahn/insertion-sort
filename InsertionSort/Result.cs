@@ -1,48 +1,8 @@
+namespace InsertionSort;
+
 public static class Result
 {
-    public static (int, List<int>) CountInsertionSort(List<int> arr)
-    {
-        int numberOfMoves = 0;
-        List<int> sorted = new List<int>(arr.Count);
-        sorted.Add(arr[0]);
-
-        for (var i = 1; i < arr.Count; i++)
-        {
-            var current = arr[i];
-            // NOTE This may be unlikely enough that it does not pay off to add one extra if here, one extra if for each number
-            if (current >= sorted[i - 1])
-            {
-                sorted.Insert(i, current);
-                continue;
-            }
-
-            var upperIndex = i;
-            var middleIndex = i / 2;
-            var lowerIndex = 0;
-
-            while (upperIndex - lowerIndex > 0)
-            {
-                if (current < sorted[middleIndex]) upperIndex = middleIndex;
-                else if (current > sorted[middleIndex]) lowerIndex = middleIndex + 1;
-                else goto insert;
-
-                middleIndex = (upperIndex + lowerIndex) / 2;
-            }
-
-        insert:
-            // NOTE Previously also had this && (middleIndex + 1) != i which should never happen since everything is sorted by size, and in beginning of algorithm the leftmost element is checked. Keep out unless remove first check.
-            while (current == sorted[middleIndex])
-            {
-                middleIndex += 1;
-            }
-
-            sorted.Insert(middleIndex, current);
-            numberOfMoves += i - middleIndex;
-        }
-        return (numberOfMoves, sorted);
-    }
-
-    public static int insertionSort(int[] arr)
+    public static int CountFredSort(int[] arr)
     {
         int numberOfMoves = 0;
         List<int> sorted = new List<int>(arr.Length);
@@ -51,28 +11,21 @@ public static class Result
         for (var i = 1; i < arr.Length; i++)
         {
             var current = arr[i];
-            
-            if (current >= sorted[i - 1])
-            {
-                sorted.Insert(i, current);
-                continue;
-            }
-
             var upperIndex = i;
             var middleIndex = i / 2;
             var lowerIndex = 0;
 
             while (upperIndex - lowerIndex > 0)
             {
-                if (current < sorted[middleIndex]) upperIndex = middleIndex;
-                else if (current > sorted[middleIndex]) lowerIndex = middleIndex + 1;
+                if (current < sorted[middleIndex]) upperIndex = middleIndex; // lower half
+                else if (current > sorted[middleIndex]) lowerIndex = middleIndex + 1; // upper half
                 else goto insert;
 
                 middleIndex = (upperIndex + lowerIndex) / 2;
             }
 
         insert:
-            while (current == sorted[middleIndex])
+            while (middleIndex < i && current == sorted[middleIndex])
             {
                 middleIndex += 1;
             }
@@ -83,23 +36,23 @@ public static class Result
         return numberOfMoves;
     }
 
-    // public static int insertionSort(int[] arr)
-    // {
-    //     int numberOfMoves = 0;
-    //     for (var i = 1; i < arr.Length; i++)
-    //     {
-    //         var currentInteger = arr[i];
-    //         var j = i - 1;
-    //         while (j >= 0 && arr[j] > currentInteger)
-    //         {
-    //             arr[j + 1] = arr[j];
-    //             j--;
-    //         }
-    //         arr[j + 1] = currentInteger;
-    //         numberOfMoves += i - (j + 1);
-    //     }
-    //     return numberOfMoves;
-    // }
+    public static int CountInsertionSort(int[] arr)
+    {
+        int numberOfMoves = 0;
+        for (var i = 1; i < arr.Length; i++)
+        {
+            var currentInteger = arr[i];
+            var j = i - 1;
+            while (j >= 0 && arr[j] > currentInteger)
+            {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = currentInteger;
+            numberOfMoves += i - (j + 1);
+        }
+        return numberOfMoves;
+    }
 
     public static int[] DoInsertionSort(int[] arr)
     {

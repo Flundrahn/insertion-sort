@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSort", "InsertionS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSort.Tests", "InsertionSort.Tests\InsertionSort.Tests.csproj", "{040DA24A-08B6-40CF-BB74-994EE3EF54B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSort.Benchmarks", "InsertionSort.Benchmarks\InsertionSort.Benchmarks.csproj", "{EDD41111-A69F-4A85-B08D-38BAD2875297}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{040DA24A-08B6-40CF-BB74-994EE3EF54B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{040DA24A-08B6-40CF-BB74-994EE3EF54B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{040DA24A-08B6-40CF-BB74-994EE3EF54B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD41111-A69F-4A85-B08D-38BAD2875297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD41111-A69F-4A85-B08D-38BAD2875297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD41111-A69F-4A85-B08D-38BAD2875297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD41111-A69F-4A85-B08D-38BAD2875297}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
