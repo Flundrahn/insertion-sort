@@ -1,0 +1,288 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\ac0fd6a9-e907-41f5-b791-412dde7714da
+// command took 1.8s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\ac0fd6a9-e907-41f5-b791-412dde7714da
+// command took 3.75s and exited with 0
+// ***** Done, took 00:00:05 (5.68 sec)   *****
+// Found 2 benchmarks:
+//   InsertionSortCount.CountFredSort: Job-OGFKHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+//   InsertionSortCount.CountFredSortArray: Job-OGFKHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: InsertionSortCount.CountFredSort: Job-OGFKHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 3
+// Execute: dotnet ac0fd6a9-e907-41f5-b791-412dde7714da.dll --benchmarkName InsertionSort.Benchmarks.InsertionSortCount.CountFredSort --job "IterationCount=3, LaunchCount=3, WarmupCount=3" --benchmarkId 0 in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\ac0fd6a9-e907-41f5-b791-412dde7714da\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-FFQUKD(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 486100.00 ns, 486.1000 us/op
+WorkloadJitting  1: 1 op, 434993100.00 ns, 434.9931 ms/op
+
+OverheadJitting  2: 1 op, 400.00 ns, 400.0000 ns/op
+WorkloadJitting  2: 1 op, 439618200.00 ns, 439.6182 ms/op
+
+WorkloadWarmup   1: 1 op, 445966600.00 ns, 445.9666 ms/op
+WorkloadWarmup   2: 1 op, 432994800.00 ns, 432.9948 ms/op
+WorkloadWarmup   3: 1 op, 430949500.00 ns, 430.9495 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 436922600.00 ns, 436.9226 ms/op
+WorkloadActual   2: 1 op, 429379900.00 ns, 429.3799 ms/op
+WorkloadActual   3: 1 op, 432382900.00 ns, 432.3829 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 436922600.00 ns, 436.9226 ms/op
+WorkloadResult   2: 1 op, 429379900.00 ns, 429.3799 ms/op
+WorkloadResult   3: 1 op, 432382900.00 ns, 432.3829 ms/op
+
+// AfterAll
+// Benchmark Process 3572 has exited with code 0.
+// Launch: 2 / 3
+// Execute: dotnet ac0fd6a9-e907-41f5-b791-412dde7714da.dll --benchmarkName InsertionSort.Benchmarks.InsertionSortCount.CountFredSort --job "IterationCount=3, LaunchCount=3, WarmupCount=3" --benchmarkId 0 in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\ac0fd6a9-e907-41f5-b791-412dde7714da\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-LALGBH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 470800.00 ns, 470.8000 us/op
+WorkloadJitting  1: 1 op, 432581600.00 ns, 432.5816 ms/op
+
+OverheadJitting  2: 1 op, 600.00 ns, 600.0000 ns/op
+WorkloadJitting  2: 1 op, 427023400.00 ns, 427.0234 ms/op
+
+WorkloadWarmup   1: 1 op, 423472300.00 ns, 423.4723 ms/op
+WorkloadWarmup   2: 1 op, 430158000.00 ns, 430.1580 ms/op
+WorkloadWarmup   3: 1 op, 429096500.00 ns, 429.0965 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 440172800.00 ns, 440.1728 ms/op
+WorkloadActual   2: 1 op, 428182300.00 ns, 428.1823 ms/op
+WorkloadActual   3: 1 op, 427602700.00 ns, 427.6027 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 440172800.00 ns, 440.1728 ms/op
+WorkloadResult   2: 1 op, 428182300.00 ns, 428.1823 ms/op
+WorkloadResult   3: 1 op, 427602700.00 ns, 427.6027 ms/op
+
+// AfterAll
+// Benchmark Process 21332 has exited with code 0.
+// Launch: 3 / 3
+// Execute: dotnet ac0fd6a9-e907-41f5-b791-412dde7714da.dll --benchmarkName InsertionSort.Benchmarks.InsertionSortCount.CountFredSort --job "IterationCount=3, LaunchCount=3, WarmupCount=3" --benchmarkId 0 in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\ac0fd6a9-e907-41f5-b791-412dde7714da\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-HYZJIV(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 519600.00 ns, 519.6000 us/op
+WorkloadJitting  1: 1 op, 446575200.00 ns, 446.5752 ms/op
+
+OverheadJitting  2: 1 op, 700.00 ns, 700.0000 ns/op
+WorkloadJitting  2: 1 op, 443704600.00 ns, 443.7046 ms/op
+
+WorkloadWarmup   1: 1 op, 442752700.00 ns, 442.7527 ms/op
+WorkloadWarmup   2: 1 op, 457381400.00 ns, 457.3814 ms/op
+WorkloadWarmup   3: 1 op, 440759900.00 ns, 440.7599 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 443803500.00 ns, 443.8035 ms/op
+WorkloadActual   2: 1 op, 439832700.00 ns, 439.8327 ms/op
+WorkloadActual   3: 1 op, 441910300.00 ns, 441.9103 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 443803500.00 ns, 443.8035 ms/op
+WorkloadResult   2: 1 op, 439832700.00 ns, 439.8327 ms/op
+WorkloadResult   3: 1 op, 441910300.00 ns, 441.9103 ms/op
+
+// AfterAll
+// Benchmark Process 1352 has exited with code 0.
+
+Mean = 435.577 ms, StdErr = 2.094 ms (0.48%), N = 9, StdDev = 6.282 ms
+Min = 427.603 ms, Q1 = 429.380 ms, Median = 436.923 ms, Q3 = 440.173 ms, Max = 443.803 ms
+IQR = 10.793 ms, LowerFence = 413.191 ms, UpperFence = 456.362 ms
+ConfidenceInterval = [425.020 ms; 446.133 ms] (CI 99.9%), Margin = 10.556 ms (2.42% of Mean)
+Skewness = -0.09, Kurtosis = 1.11, MValue = 2
+
+// ** Remained 1 (50.0%) benchmark(s) to run. Estimated finish 2022-09-28 21:43 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: InsertionSortCount.CountFredSortArray: Job-OGFKHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 3
+// Execute: dotnet ac0fd6a9-e907-41f5-b791-412dde7714da.dll --benchmarkName InsertionSort.Benchmarks.InsertionSortCount.CountFredSortArray --job "IterationCount=3, LaunchCount=3, WarmupCount=3" --benchmarkId 1 in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\ac0fd6a9-e907-41f5-b791-412dde7714da\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ITLBIF(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 396700.00 ns, 396.7000 us/op
+WorkloadJitting  1: 1 op, 433167500.00 ns, 433.1675 ms/op
+
+OverheadJitting  2: 1 op, 500.00 ns, 500.0000 ns/op
+WorkloadJitting  2: 1 op, 426995900.00 ns, 426.9959 ms/op
+
+WorkloadWarmup   1: 1 op, 428774500.00 ns, 428.7745 ms/op
+WorkloadWarmup   2: 1 op, 425716800.00 ns, 425.7168 ms/op
+WorkloadWarmup   3: 1 op, 426483700.00 ns, 426.4837 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 425655500.00 ns, 425.6555 ms/op
+WorkloadActual   2: 1 op, 429757500.00 ns, 429.7575 ms/op
+WorkloadActual   3: 1 op, 431668100.00 ns, 431.6681 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 425655500.00 ns, 425.6555 ms/op
+WorkloadResult   2: 1 op, 429757500.00 ns, 429.7575 ms/op
+WorkloadResult   3: 1 op, 431668100.00 ns, 431.6681 ms/op
+
+// AfterAll
+// Benchmark Process 19568 has exited with code 0.
+// Launch: 2 / 3
+// Execute: dotnet ac0fd6a9-e907-41f5-b791-412dde7714da.dll --benchmarkName InsertionSort.Benchmarks.InsertionSortCount.CountFredSortArray --job "IterationCount=3, LaunchCount=3, WarmupCount=3" --benchmarkId 1 in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\ac0fd6a9-e907-41f5-b791-412dde7714da\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-PYNCZW(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 574500.00 ns, 574.5000 us/op
+WorkloadJitting  1: 1 op, 438640200.00 ns, 438.6402 ms/op
+
+OverheadJitting  2: 1 op, 600.00 ns, 600.0000 ns/op
+WorkloadJitting  2: 1 op, 430878800.00 ns, 430.8788 ms/op
+
+WorkloadWarmup   1: 1 op, 434830800.00 ns, 434.8308 ms/op
+WorkloadWarmup   2: 1 op, 432486600.00 ns, 432.4866 ms/op
+WorkloadWarmup   3: 1 op, 432588400.00 ns, 432.5884 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 450401200.00 ns, 450.4012 ms/op
+WorkloadActual   2: 1 op, 433189200.00 ns, 433.1892 ms/op
+WorkloadActual   3: 1 op, 437640600.00 ns, 437.6406 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 450401200.00 ns, 450.4012 ms/op
+WorkloadResult   2: 1 op, 433189200.00 ns, 433.1892 ms/op
+WorkloadResult   3: 1 op, 437640600.00 ns, 437.6406 ms/op
+
+// AfterAll
+// Benchmark Process 21284 has exited with code 0.
+// Launch: 3 / 3
+// Execute: dotnet ac0fd6a9-e907-41f5-b791-412dde7714da.dll --benchmarkName InsertionSort.Benchmarks.InsertionSortCount.CountFredSortArray --job "IterationCount=3, LaunchCount=3, WarmupCount=3" --benchmarkId 1 in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\ac0fd6a9-e907-41f5-b791-412dde7714da\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-DXZCER(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 403300.00 ns, 403.3000 us/op
+WorkloadJitting  1: 1 op, 433517300.00 ns, 433.5173 ms/op
+
+OverheadJitting  2: 1 op, 400.00 ns, 400.0000 ns/op
+WorkloadJitting  2: 1 op, 428243200.00 ns, 428.2432 ms/op
+
+WorkloadWarmup   1: 1 op, 428995900.00 ns, 428.9959 ms/op
+WorkloadWarmup   2: 1 op, 428777200.00 ns, 428.7772 ms/op
+WorkloadWarmup   3: 1 op, 429507200.00 ns, 429.5072 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 437910700.00 ns, 437.9107 ms/op
+WorkloadActual   2: 1 op, 427210700.00 ns, 427.2107 ms/op
+WorkloadActual   3: 1 op, 428445500.00 ns, 428.4455 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 437910700.00 ns, 437.9107 ms/op
+WorkloadResult   2: 1 op, 427210700.00 ns, 427.2107 ms/op
+WorkloadResult   3: 1 op, 428445500.00 ns, 428.4455 ms/op
+
+// AfterAll
+// Benchmark Process 9420 has exited with code 0.
+
+Mean = 433.542 ms, StdErr = 2.545 ms (0.59%), N = 9, StdDev = 7.635 ms
+Min = 425.656 ms, Q1 = 428.445 ms, Median = 431.668 ms, Q3 = 437.641 ms, Max = 450.401 ms
+IQR = 9.195 ms, LowerFence = 414.653 ms, UpperFence = 451.433 ms
+ConfidenceInterval = [420.712 ms; 446.372 ms] (CI 99.9%), Margin = 12.830 ms (2.96% of Mean)
+Skewness = 1, Kurtosis = 2.87, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2022-09-28 21:43 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\InsertionSort.Benchmarks.InsertionSortCount-report.csv
+  BenchmarkDotNet.Artifacts\results\InsertionSort.Benchmarks.InsertionSortCount-report-github.md
+  BenchmarkDotNet.Artifacts\results\InsertionSort.Benchmarks.InsertionSortCount-report.html
+
+// * Detailed results *
+InsertionSortCount.CountFredSort: Job-OGFKHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+Runtime = .NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 435.577 ms, StdErr = 2.094 ms (0.48%), N = 9, StdDev = 6.282 ms
+Min = 427.603 ms, Q1 = 429.380 ms, Median = 436.923 ms, Q3 = 440.173 ms, Max = 443.803 ms
+IQR = 10.793 ms, LowerFence = 413.191 ms, UpperFence = 456.362 ms
+ConfidenceInterval = [425.020 ms; 446.133 ms] (CI 99.9%), Margin = 10.556 ms (2.42% of Mean)
+Skewness = -0.09, Kurtosis = 1.11, MValue = 2
+-------------------- Histogram --------------------
+[425.693 ms ; 444.767 ms) | @@@@@@@@@
+---------------------------------------------------
+
+InsertionSortCount.CountFredSortArray: Job-OGFKHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+Runtime = .NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 433.542 ms, StdErr = 2.545 ms (0.59%), N = 9, StdDev = 7.635 ms
+Min = 425.656 ms, Q1 = 428.445 ms, Median = 431.668 ms, Q3 = 437.641 ms, Max = 450.401 ms
+IQR = 9.195 ms, LowerFence = 414.653 ms, UpperFence = 451.433 ms
+ConfidenceInterval = [420.712 ms; 446.372 ms] (CI 99.9%), Margin = 12.830 ms (2.96% of Mean)
+Skewness = 1, Kurtosis = 2.87, MValue = 2
+-------------------- Histogram --------------------
+[424.605 ms ; 434.240 ms) | @@@@@@
+[434.240 ms ; 445.584 ms) | @@
+[445.584 ms ; 455.219 ms) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.2, OS=Windows 10 (10.0.19043.2006/21H1/May2021Update)
+Intel Core i7-8750H CPU 2.20GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical cores
+.NET SDK=6.0.401
+  [Host]     : .NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+  Job-OGFKHH : .NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+
+IterationCount=3  LaunchCount=3  WarmupCount=3  
+
+|             Method |     Mean |    Error |  StdDev |
+|------------------- |---------:|---------:|--------:|
+|      CountFredSort | 435.6 ms | 10.56 ms | 6.28 ms |
+| CountFredSortArray | 433.5 ms | 12.83 ms | 7.63 ms |
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:22 (22.72 sec), executed benchmarks: 2
+
+Global total time: 00:00:28 (28.82 sec), executed benchmarks: 2
+// * Artifacts cleanup *

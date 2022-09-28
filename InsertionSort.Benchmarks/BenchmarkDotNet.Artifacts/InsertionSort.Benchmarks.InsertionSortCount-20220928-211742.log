@@ -1,0 +1,28 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\8c1826d2-d127-4bff-8710-a76cf4fdeeb4
+// command took 1.82s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\8c1826d2-d127-4bff-8710-a76cf4fdeeb4
+// command took 3.75s and exited with 0
+// ***** Done, took 00:00:05 (5.69 sec)   *****
+// Found 2 benchmarks:
+//   InsertionSortCount.CountFredSort: Job-IHCYHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+//   InsertionSortCount.CountFredSortArray: Job-IHCYHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: InsertionSortCount.CountFredSort: Job-IHCYHH(IterationCount=3, LaunchCount=3, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 3
+// Execute: dotnet 8c1826d2-d127-4bff-8710-a76cf4fdeeb4.dll --benchmarkName InsertionSort.Benchmarks.InsertionSortCount.CountFredSort --job "IterationCount=3, LaunchCount=3, WarmupCount=3" --benchmarkId 0 in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\8c1826d2-d127-4bff-8710-a76cf4fdeeb4\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-RJYHRB(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 493500.00 ns, 493.5000 us/op

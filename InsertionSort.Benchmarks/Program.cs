@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
-using CommandLine;
 using InsertionSort.Benchmarks;
 
 var summary = BenchmarkRunner.Run<InsertionSortCount>();

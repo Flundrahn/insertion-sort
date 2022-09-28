@@ -1,0 +1,63 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\3542c298-3db8-469e-87ee-6bcd711296ef
+// command took 1.79s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\3542c298-3db8-469e-87ee-6bcd711296ef
+// command took 3.73s and exited with 0
+// ***** Done, took 00:00:05 (5.64 sec)   *****
+// Found 1 benchmarks:
+//   InsertionSortCount.CountInsertionSort: Job-ABIKDZ(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: InsertionSortCount.CountInsertionSort: Job-ABIKDZ(IterationCount=3, LaunchCount=3, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 3
+// Execute: dotnet 3542c298-3db8-469e-87ee-6bcd711296ef.dll --benchmarkName InsertionSort.Benchmarks.InsertionSortCount.CountInsertionSort --job "IterationCount=3, LaunchCount=3, WarmupCount=3" --benchmarkId 0 in C:\Users\fredr\source\repos\insertion-sort\InsertionSort.Benchmarks\bin\Release\net6.0\3542c298-3db8-469e-87ee-6bcd711296ef\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.9 (6.0.922.41905), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-UCVJHG(IterationCount=3, LaunchCount=3, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 391100.00 ns, 391.1000 us/op
+WorkloadJitting  1: 1 op, 3607811500.00 ns, 3.6078 s/op
+
+OverheadJitting  2: 1 op, 600.00 ns, 600.0000 ns/op
+WorkloadJitting  2: 1 op, 239800.00 ns, 239.8000 us/op
+
+OverheadJitting  3: 16 op, 673700.00 ns, 42.1063 us/op
+WorkloadJitting  3: 16 op, 4652400.00 ns, 290.7750 us/op
+
+WorkloadPilot    1: 16 op, 3964900.00 ns, 247.8063 us/op
+WorkloadPilot    2: 32 op, 7778200.00 ns, 243.0687 us/op
+WorkloadPilot    3: 64 op, 16413600.00 ns, 256.4625 us/op
+WorkloadPilot    4: 128 op, 30283200.00 ns, 236.5875 us/op
+WorkloadPilot    5: 256 op, 62468000.00 ns, 244.0156 us/op
+WorkloadPilot    6: 512 op, 124117900.00 ns, 242.4178 us/op
+WorkloadPilot    7: 1024 op, 235511800.00 ns, 229.9920 us/op
+WorkloadPilot    8: 2048 op, 471637100.00 ns, 230.2916 us/op
+WorkloadPilot    9: 4096 op, 941034300.00 ns, 229.7447 us/op
+
+OverheadWarmup   1: 4096 op, 15600.00 ns, 3.8086 ns/op
+OverheadWarmup   2: 4096 op, 14700.00 ns, 3.5889 ns/op
+OverheadWarmup   3: 4096 op, 14700.00 ns, 3.5889 ns/op
+OverheadWarmup   4: 4096 op, 15000.00 ns, 3.6621 ns/op
+OverheadWarmup   5: 4096 op, 17900.00 ns, 4.3701 ns/op
+OverheadWarmup   6: 4096 op, 14900.00 ns, 3.6377 ns/op
+OverheadWarmup   7: 4096 op, 21700.00 ns, 5.2979 ns/op
+
+OverheadActual   1: 4096 op, 15500.00 ns, 3.7842 ns/op
+OverheadActual   2: 4096 op, 15300.00 ns, 3.7354 ns/op
+OverheadActual   3: 4096 op, 15000.00 ns, 3.6621 ns/op
+OverheadActual   4: 4096 op, 15500.00 ns, 3.7842 ns/op
+OverheadActual   5: 4096 op, 24400.00 ns, 5.9570 ns/op
+OverheadActual   6: 4096 op, 19700.00 ns, 4.8096 ns/op
+OverheadActual   7: 4096 op, 26900.00 ns, 6.5674 ns/op
+OverheadActual   8: 4096 op, 14800.00 ns, 3.6133 ns/op
+OverheadActual   9: 4096 op, 16500.00 ns, 4.0283 ns/op
+OverheadActual  10: 4096 op, 25600.00 ns, 6.2500 ns/op

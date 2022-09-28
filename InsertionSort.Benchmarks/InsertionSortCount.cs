@@ -2,24 +2,30 @@ using BenchmarkDotNet.Attributes;
 
 namespace InsertionSort.Benchmarks;
 
-// [SimpleJob(launchCount: 3, warmupCount: 3, targetCount: 3)]
+[SimpleJob(launchCount: 3, warmupCount: 3, targetCount: 3)]
 public class InsertionSortCount
 {
     private const int n = 100000;
     private const int upperBound = 10000000;
+    private int[] _arr;
 
-    [Benchmark]
-    public int CountFredSort()
+    public InsertionSortCount()
     {
-        var numberOfMoves = Result.CountFredSort(CreateIntegerArray(n, upperBound));
-
-        return numberOfMoves;
+        _arr = CreateIntegerArray(n, upperBound);
     }
 
     [Benchmark]
     public int CountInsertionSort()
     {
-        var numberOfMoves = Result.CountInsertionSort(CreateIntegerArray(n, upperBound));
+        var (numberOfMoves, _) = Result.CountInsertionSort(_arr);
+
+        return numberOfMoves;
+    }
+
+    [Benchmark]
+    public int CountFiddyFiddySort()
+    {
+        var (numberOfMoves, _) = Result.CountFiddyFiddySort(_arr);
 
         return numberOfMoves;
     }

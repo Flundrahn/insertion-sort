@@ -1,42 +1,59 @@
-namespace InsertionSort;
-
 public static class Result
 {
-    public static int CountFredSort(int[] arr)
+    public static (int, int[]) CountFiddyFiddySort(int[] arr)
     {
         int numberOfMoves = 0;
-        List<int> sorted = new List<int>(arr.Length);
-        sorted.Add(arr[0]);
+        var sorted = new int[arr.Length];
+        sorted[0] = arr[0];
 
         for (var i = 1; i < arr.Length; i++)
         {
             var current = arr[i];
+
+            if (current >= sorted[i - 1])
+            {
+                sorted[i] = current;
+                continue;
+            }
+
             var upperIndex = i;
-            var middleIndex = i / 2;
+            var index = i / 2;
             var lowerIndex = 0;
 
             while (upperIndex - lowerIndex > 0)
             {
-                if (current < sorted[middleIndex]) upperIndex = middleIndex; // lower half
-                else if (current > sorted[middleIndex]) lowerIndex = middleIndex + 1; // upper half
+                if (current < sorted[index]) upperIndex = index;
+                else if (current > sorted[index]) lowerIndex = index + 1;
                 else goto insert;
 
-                middleIndex = (upperIndex + lowerIndex) / 2;
+                index = (upperIndex + lowerIndex) / 2;
             }
 
         insert:
-            while (middleIndex < i && current == sorted[middleIndex])
+            while (current == sorted[index])
             {
-                middleIndex += 1;
+                index += 1;
             }
 
-            sorted.Insert(middleIndex, current);
-            numberOfMoves += i - middleIndex;
+            sorted.Insert(index, current, i - index);
+            numberOfMoves += i - index;
         }
-        return numberOfMoves;
+        return (numberOfMoves, sorted);
     }
 
-    public static int CountInsertionSort(int[] arr)
+    public static void Insert(this int[] arr, int index, int value, int elementsToShift)
+    {
+        Buffer.BlockCopy(
+            arr,
+            sizeof(int) * index,
+            arr,
+            sizeof(int) * (index + 1),
+            sizeof(int) * elementsToShift
+        );
+        arr[index] = value;
+    }
+
+    public static (int, int[]) CountInsertionSort(int[] arr)
     {
         int numberOfMoves = 0;
         for (var i = 1; i < arr.Length; i++)
@@ -51,81 +68,7 @@ public static class Result
             arr[j + 1] = currentInteger;
             numberOfMoves += i - (j + 1);
         }
-        return numberOfMoves;
-    }
-
-    public static int[] DoInsertionSort(int[] arr)
-    {
-        for (var i = 1; i < arr.Length; i++)
-        {
-            var currentInteger = arr[i];
-
-            var j = i - 1;
-
-            while (j >= 0 && arr[j] >= currentInteger)
-            {
-                arr[j + 1] = arr[j];
-                j--;
-            }
-            arr[j + 1] = currentInteger;
-        }
-
-        return arr;
-    }
-
-    public static int[] DoFredSort(int[] arr)
-    {
-        IEnumerable<int> sorted = arr.Take(2);
-
-        for (var i = 1; i < arr.Length; i++)
-        {
-            var current = arr[i];
-
-            var upperIndex = i;
-            var middleIndex = i / 2;
-            var lowerIndex = 0;
-
-            while (upperIndex - lowerIndex > 0)
-            {
-                if (current < arr[middleIndex])
-                {
-                    upperIndex = middleIndex;
-                }
-                else if (current > arr[middleIndex])
-                {
-                    lowerIndex = middleIndex + 1;
-                }
-                else
-                {
-                    goto insert;
-                }
-
-                middleIndex = (upperIndex + lowerIndex) / 2;
-            }
-
-        insert:
-            sorted = sorted.Take(middleIndex)
-                .Concat(new int[] { current })
-                .Concat(sorted
-                    .Skip(middleIndex)
-                    .Take(i - middleIndex));
-        }
-        return sorted!.ToArray();
-    }
-
-    public static int insertionSortOld(int[] arr)
-    {
-        int numberOfMoves = 0;
-        for (var i = 1; i < arr.Length; i++)
-        {
-            var currentInteger = arr[i];
-
-            Array.Sort(arr, 0, i + 1);
-
-            numberOfMoves += i - Array.FindLastIndex(arr, i, e => e == currentInteger);
-        }
-
-        return numberOfMoves;
+        return (numberOfMoves, arr);
     }
 }
 
