@@ -1,6 +1,6 @@
 # insertion-sort
 
-This project was built to solve the problem `Insertion Sort Advanced Analysis`on [HackerRank.com](https://www.hackerrank.com/challenges/insertion-sort/problem).
+This project was built to solve the problem `Insertion Sort Advanced Analysis` on [HackerRank.com](https://www.hackerrank.com/challenges/insertion-sort/problem).
 
 ## Introduction
 
@@ -21,7 +21,7 @@ To solve this I came up with an algorithm I have named `FiddyFiddy Sort (FFS)`. 
 Take an element, compare it to the middle of the sorted part, if smaller compare it to the middle of the lower quarter, if instead larger then compare it to the upper quarter, and keep bisecting the array until narrowed down to exactly one spot, the element has found its home!
 
 <p align="center">
-<img src="FiddyFiddySort.png" alt="Illustration of insertion sort" height="100px"/>
+<img src="FiddyFiddySort.png" alt="Illustration of FiddyFiddy sort" height="100px"/>
 </p>
 
 With the element in position, the number of moves IS would have made is given by the difference of the original and the new index.
