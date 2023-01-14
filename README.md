@@ -49,8 +49,8 @@ This operation must be performed for each element, the first must be inserted in
 
 $$\begin{aligned}
     t_{total} &= \frac{ \log 1 }{\log2} + \frac{ \log 2 }{\log2} + \frac{ \log 3 }{\log2}+... +\frac{ \log N }{ \log 2}, \\
-    &= \frac{ \log \left(1 \cdot 2 \cdot 3 \cdot ... \cdot N \right) }{ \log 2}, \\
-    &= \frac{ \log \left( N! \right) }{ \log 2},
+    \&= \frac{ \log \left(1 \cdot 2 \cdot 3 \cdot ... \cdot N \right) }{ \log 2}, \\
+    \&= \frac{ \log \left( N! \right) }{ \log 2},
 \end{aligned}$$
 
 This gives a time complexity $\mathcal{O}\left(\log(N!)\right)$, this is independent of what the original array looks like, meaning this is the worst case scenario. The reader should note that this will always be lower than $\mathcal{O} \left(N \log N \right)$ which is the time complexity of `merge sort` and `quick sort`.
