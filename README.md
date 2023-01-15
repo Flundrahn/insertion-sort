@@ -49,9 +49,9 @@ This operation must be performed for each element, the first must be inserted in
 
 $$
 \begin{align}
-    t_{total} \&= \frac{ \log 1 }{\log2} + \frac{ \log 2 }{\log2} + \frac{ \log 3 }{\log2}+... +\frac{ \log N }{ \log 2}, \\
-    \&= \frac{ \log \left(1 \cdot 2 \cdot 3 \cdot ... \cdot N \right) }{ \log 2}, \\
-    \&= \frac{ \log \left( N! \right) }{ \log 2},
+    t_{total} &= \frac{ \log 1 }{\log2} + \frac{ \log 2 }{\log2} + \frac{ \log 3 }{\log2}+... +\frac{ \log N }{ \log 2}, \\
+    &= \frac{ \log \left(1 \cdot 2 \cdot 3 \cdot ... \cdot N \right) }{ \log 2}, \\
+    &= \frac{ \log \left( N! \right) }{ \log 2},
 \end{align}
 $$
 
