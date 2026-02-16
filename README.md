@@ -6,9 +6,7 @@ This project was built to solve the problem `Insertion Sort Advanced Analysis` o
 
 [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) (IS) is one of the simpler sorting algorithms out there. One starts with the second element in the array, compare with the first, swap position if smaller. Then continuing with the third element, which will be compared to the already sorted ones, one at a time. Keep comparing and moving until the element has found its correct place in the sorted part of the array. This is repeated for all elements in the array and in the end it has been nicely sorted.
 
-<p align="center">
-<img src="InsertionSort.png" alt="Illustration of insertion sort" height="100px"/>
-</p>
+![Illustration of insertion sort](https://github.com/Flundrahn/insertion-sort/raw/main/InsertionSort_100px.png)
 
 IS scales poorly, with $\mathcal{O}(N^2)$, but for small arrays it is indeed very fast and up to 16 elements it is the default array sorting algorithm in [.NET](https://learn.microsoft.com/en-us/dotnet/api/system.array.sort?view=net-6.0).
 
@@ -20,9 +18,7 @@ To solve this I came up with an algorithm I have named `FiddyFiddy Sort (FFS)`. 
 
 Take an element, compare it to the middle of the sorted part, if smaller compare it to the middle of the lower quarter, if instead larger then compare it to the upper quarter, and keep bisecting the array until narrowed down to exactly one spot, the element has found its home!
 
-<p align="center">
-<img src="FiddyFiddySort.png" alt="Illustration of FiddyFiddy sort" height="100px"/>
-</p>
+![Illustration of FiddyFiddy sort](https://github.com/Flundrahn/insertion-sort/raw/main/FiddyFiddySort_100px.png)
 
 With the element in position, the number of moves IS would have made is given by the difference of the original and the new index.
 
